@@ -2,7 +2,7 @@
 # Install Elasticsearch dependencies
 - name: "Install Elasticsearch dependencies"
   sudo: yes
-  action: ${ansible_pkg_mgr} pkg={{ item }} state=installed update-cache=yes
+  action: apt pkg={{ item }} state=installed update-cache=yes
   with_items: elasticsearch.deb.dependencies
 
 # Fetch Elasticsearch Debian package
